@@ -1,0 +1,31 @@
+{
+  "name": "micro-quizzes",
+  "version": "1.0.0",
+  "description": "Microservicio para el control de Prácticas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UTPL-Rank/micro-quizzes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UTPL-Rank/micro-quizzes/issues"
+  },
+  "homepage": "https://github.com/UTPL-Rank/micro-quizzes#readme",
+  "dependencies": {
+    "@google-cloud/pubsub": "3.1.0",
+    "dotenv": "16.0.2",
+    "express": "4.18.1",
+    "mongoose": "6.5.4",
+    "mongoose-unique-validator": "3.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
