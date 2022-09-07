@@ -1,5 +1,8 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
+app.use(cors());
 
 require("./mongo_db");
 
@@ -8,7 +11,6 @@ app.use(express.json());
 
 //Routes applicant
 app.use("/quiz", require("./routes/quiz/get_quiz"));
-// app.use("/applicant", require("./routes/applicant/post_applicant"));
 
 const PORT = process.env.PORT || 3333;
 app.listen(PORT, () => {
