@@ -3,15 +3,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const quizSchema = new Schema(
-  {
-    questions: [{
-        type: Schema.Types.ObjectId,
-        ref: "Question"
+  { 
+    cantidad: Number,
+    preguntas: [{
     }],
-    reply: {
-      type: Schema.Types.ObjectId,
-      ref: "Reply",
-    },
   },
   { versionKey: false }
 );

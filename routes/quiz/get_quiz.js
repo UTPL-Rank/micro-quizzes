@@ -10,5 +10,6 @@ const applicant_controller = require("../../controllers/quiz/quizController");
 
 //GET quiz by quantity
 router.get("/:quantity", applicant_controller.quiz_get_byQuantity);
+router.get("/answer/answers", applicant_controller.quiz_get_answers);
 
 module.exports = router;
