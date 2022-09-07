@@ -4,12 +4,12 @@ const Schema = mongoose.Schema;
 
 const replySchema = new Schema(
   {
-    question: 
+    pregunta: 
       {
         type: Schema.Types.ObjectId,
         ref: "Question",
       },
-    choice: {
+    seleccion: {
       type: Schema.Types.ObjectId,
       ref: "Answer",
     },

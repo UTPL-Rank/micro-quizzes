@@ -14,7 +14,11 @@ const questionSchema = new Schema(
     textoPregunta: String,
     imagenPregunta: String,
     tipoPregunta: typeQuestion.simple,
-    codigo: String,
+    codigo: {
+      type: Number,
+      required: true,
+      unique: true,
+    },
     peso: Number,
     subPreguntas: [
       {
@@ -22,6 +26,7 @@ const questionSchema = new Schema(
         ref: "Question",
       },
     ],
+    respuestas: [],
   },
   { versionKey: false }
 );
