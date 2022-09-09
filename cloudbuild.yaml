@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/utpl-rank/micro-quizzes:$SHORT_SHA', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/utpl-rank/micro-quizzes:$SHORT_SHA']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['beta', 'run', 'deploy', 'micro-quizzes', '--region=us-central1', '--platform=managed', '--image=gcr.io/utpl-rank/micro-quizzes:$SHORT_SHA']
