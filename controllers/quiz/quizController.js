@@ -19,7 +19,7 @@ exports.quiz_get_byQuantity = async (req, res) => {
   let number = Number(quantity);
   let lengthArray = number;
   var arrayQuestions = [];
-  let array = generateRandomArray(lengthArray);
+  let array = generateRandomArray(13);
   try {
     for (let i = 0; i < lengthArray; i++) {
       let index = array[i];
